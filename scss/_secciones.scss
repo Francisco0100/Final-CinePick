@@ -1,0 +1,202 @@
+/*------------VARIABLES------------*/
+$primary-color: #2499c7;
+$secondary-color: #dadada;
+$font-small: 1.3rem;
+$font-medium: 1.5rem;
+$font-large: 1.6rem;
+$background-color: #ffffff;
+$border-radius: 5px;
+$transition-speed: 0.3s;
+
+/*------------MIXIN------------*/
+@mixin border-radius($radius){
+    border-radius: $radius;
+}
+
+/*------------ANIMACIONES------------*/
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/*------------SECCIONES/DIVS------------*/
+
+.headerinfo{
+    text-align: center;
+    padding: 20px;
+}
+
+.menu{
+    color: rgb(0, 0, 0);
+    font-size: $font-large;
+    font-weight: bold;
+    border: rgb(255, 255, 255) 2px solid;
+    background-color: $background-color;
+    text-decoration: none;
+    @include border-radius($border-radius);
+}
+
+ul{
+    padding: 10px;
+    list-style-type: none;
+} 
+
+li{
+    padding: 10px;
+}
+
+section{
+    padding-bottom: 2%;
+}
+
+.rectangulo{
+    height: 35px;
+    width: 250px;
+    background-color: $secondary-color;
+    border: rgb(131, 38, 108) 4px solid;
+    @include border-radius(4px);
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 35px;
+}
+
+.hrlista{
+    max-width: 40%;
+    margin-left: 30%;
+}
+
+.linksmenu{
+    color: rgb(0, 0, 0);
+    font-size: $font-medium;
+    font-weight: bold;
+    border: rgb(0, 0, 0) 3px solid;
+    background-color: $background-color;
+    text-decoration: none;
+    @include border-radius($border-radius);
+    padding: 5px 10px;
+    transition: all $transition-speed;
+}
+
+.linksmenu:hover{
+    background-color: $primary-color;
+    color: $background-color;
+    @include border-radius(9px);
+}
+
+.nosfooter{
+    color: rgb(0, 0, 0);
+    font-size: $font-medium;
+    font-weight: bold;
+    border: rgb(0, 0, 0) 3px solid;
+    background-color: $background-color;
+    text-decoration: none;
+    padding: 5px 15px;  
+    display: inline-block;  
+    transition: all $transition-speed;
+}
+
+.nosfooter:hover{
+    background-color: $primary-color;  
+    color: white;  
+    @include border-radius(9px);
+}
+
+.nosotros h2{
+    margin: 0;  
+    font-size: $font-medium;  
+    color: black;
+}
+
+.estoy{
+    border: $primary-color 3px solid;
+}
+
+.estoy1{
+    background-color: #0087bd;
+    @include border-radius(100%);
+    border: 1px solid black;
+}
+
+.hamburguesa{
+    background-color: white;
+    @include border-radius($border-radius);
+}
+
+.hr-custom{
+    border: 2px solid #ffffff; 
+    margin-top: 0px; 
+    margin-bottom: 0px; 
+    width: 100%; 
+}
+
+.contenedor1{
+    margin: 0px auto;
+    padding: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: 
+        "menus menus"
+        "info info"
+        "col3 col3"
+        "peli2 peli2";
+    gap: 10px;
+}
+
+.col1{
+    grid-area: menus;
+}
+
+.col2{
+    grid-area: info;
+}
+
+.col3{
+    grid-area: col3;
+}
+
+.col4{
+    grid-area: peli2;
+}
+
+.col-lg-8, .col-lg-4{
+    padding: 0; 
+}
+
+.cal{
+    grid-area: calen;
+    margin: auto;
+}
+
+.infocal{
+    grid-area: infocal;
+}
+
+.pelis{
+    grid-area: pelis;
+}
+
+.contenedor2{
+    margin: 0px auto;
+    padding: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: 
+        "menus menus"
+        "calen pelis"
+        "infocal pelis";
+    gap: 10px;
+}
+
+.grad{
+    background: linear-gradient(yellow, green, red, blue, purple, orange);
+    transition: all 4s;
+}

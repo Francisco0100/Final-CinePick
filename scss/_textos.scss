@@ -1,0 +1,37 @@
+/*------------VARIABLES------------*/
+$text-color-light: rgb(255, 255, 255);
+$text-color-dark: rgb(202, 202, 202);
+$text-highlight: rgb(8, 172, 172);
+$text-shadow-color: #000000;
+$font-small: 1.2rem;
+$font-medium: 1.9rem;
+$font-large: 2rem;
+
+/*------------TEXTOS------------*/
+
+h1{
+    color: $text-color-light;
+    font-size: $font-large;
+    font-weight: bold;
+    text-shadow: 0 0 8px $text-shadow-color, 0 0 8px $text-shadow-color;
+}
+
+h2{
+    color: $text-color-dark;
+    font-size: $font-medium;
+    margin-top: 4%;
+}
+
+h3{
+    color: $text-color-dark;
+    font-size: $font-medium;
+    margin-top: 10px;
+}
+
+p{
+    font-size: $font-small;
+    text-align: center;
+    font-weight: bold;
+    color: $text-highlight;
+    padding: 1% 10%;
+}

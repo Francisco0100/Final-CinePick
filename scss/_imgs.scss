@@ -1,0 +1,207 @@
+/*------------VARIABLES------------*/
+$primary-color: #2499c7;
+$border-color: black;
+$img-hover-opacity: 1.5;
+$img-normal-opacity: 0.5;
+$logo-size: 50px;
+
+/*------------MIXIN------------*/
+@mixin logo-style($size){
+    width: $size;
+    height: $size;
+    transition: 0.5s all;
+}
+
+@mixin img-hover-effect($hover-opacity){
+    opacity: $hover-opacity;
+}
+
+/*------------IMAGENES/VIDEOS------------*/
+.logoredes{
+    @include logo-style($logo-size);
+    margin: 2%;
+}
+
+.logoperfil{
+    @include logo-style(55px);
+    margin-bottom: 10px;
+
+    &:hover{
+        background-color: $primary-color;
+        border-radius: 100%;
+        border: 2px solid $border-color;
+    }
+}
+
+.logopagina{
+    width: 90px;
+    height: 90px;
+}
+
+.video{
+    width: 100%; 
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.calendario{
+    width: 25%;
+}
+
+.posters{
+    width: 70%;
+    margin: 15px;
+    opacity: $img-normal-opacity;
+    
+    &:hover{
+        @include img-hover-effect($img-hover-opacity);
+    }
+}
+
+.espacios {
+    width: 25%;
+    margin: 3%;
+}
+
+.nosotrosfoto {
+    width: 60%;
+}
+
+/*------------REDES------------*/
+.redes{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;  
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+
+    .nosotros{
+        color: white;
+        text-decoration: underline;
+        font-size: 1.6rem;
+        margin-left: 20px;
+    }
+
+    .social-icons{
+        display: flex;
+        gap: 10px;
+
+        .logoredes{
+            @include logo-style(40px);
+            &:hover {
+                @include logo-style(47px);
+            }
+        }
+    }
+}
+
+/*------------HEADER------------*/
+.header-grid{
+    display: grid;
+    grid-template-columns: auto 1fr auto; 
+    align-items: center;
+    padding: 20px;
+
+    h1{
+        justify-self: start;
+        margin: 13px;
+    }
+
+    .header-logo{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .header-title{
+        margin: 0; 
+    }
+
+    .header-profile{
+        justify-self: end;
+    }
+}
+
+/*------------FOOTER------------*/
+footer {
+    padding: 20px;
+    
+    .redes{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+
+        .nosotros{
+            margin-right: auto;
+        }
+
+        .nosfooter{
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+
+        .social-icons{
+            display: flex;
+            gap: 15px;
+        }
+    }
+}
+
+main, footer{
+    margin: 0;
+    padding: 0;
+}
+
+main p, main ul{
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+footer{
+    margin-top: 0;
+    padding-bottom: 20px;
+}
+
+.tamano{
+    width: 900px;
+    margin: auto;
+    padding-bottom: 40px;
+}
+
+/*------------FORMULARIO------------*/
+.formulariocont{
+    background-color: rgba(87, 111, 216, 0.11);
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas: 
+        "form1 form3"
+        "form2 form3";
+    gap: 10px;
+    margin-top: 100px;
+    padding-bottom: 30px;
+
+    .form1{
+        grid-area: form1;
+    }
+
+    .form2{
+        grid-area: form2;
+    }
+
+    .form3{
+        grid-area: form3;
+        padding-top: 30px;
+        margin: auto 20px;
+    }
+}
+
+.mainperfil{
+    padding-bottom: 10vw;
+}

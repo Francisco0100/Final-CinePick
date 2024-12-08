@@ -1,0 +1,32 @@
+/*------------VARIABLES------------*/
+$color-light: rgb(200, 239, 255);
+$color-white: #ffffff;
+$color-accent: #FFB16D;
+$font-small: 1.4rem;
+$font-large: 2rem;
+
+/*------------PARRAFO/FRASE CON CLASE UNICA------------*/
+
+.lista{
+    margin-top: 50px;
+    padding-bottom: 0.5%;
+}
+
+.titulopeli{
+    color: $color-light;
+    font-size: $font-large;
+    font-weight: bold;
+}
+
+.infopeli{
+    max-width: 100%;
+    word-wrap: break-word;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.entrar{
+    color: $color-white;
+    font-size: $font-small;
+    background-color: $color-accent;
+}

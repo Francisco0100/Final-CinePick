@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/*------------VARIABLES------------*/
+$gradient: linear-gradient(90deg, #109bd6, #0c2933);
+$font-family: "Roboto Mono", monospace;
+
+/*------------MIXIN------------*/
+@mixin gradient-bg{
+    background: $gradient;
+    background-size: 400% 400%;
+    animation: gradient 6s ease infinite;
+}
+
+/*------------INFO BASE------------*/
+body, html{
+    font-family: $font-family;
+    text-align: center;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+header, footer{
+    @include gradient-bg;
+    text-align: center;
+    padding: 20px 0;
+}
+
+main{
+    background-image: url(../img/fondo1.jpg);
+    text-align: center;
+}
+
+/*------------EXTEND------------*/
+.container{
+    @extend header;
+    height: 100px;
+}

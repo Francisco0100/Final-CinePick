@@ -1,0 +1,223 @@
+/*------------VARIABLES------------*/
+$primary-color: #2499c7;
+$font-small: 0.9rem;
+$font-medium: 1rem;
+$font-large: 1.5rem;
+$font-xlarge: 2rem;
+$background-color: rgba(87, 111, 216, 0.11);
+$gradient-animation-duration: 6s;
+$header-padding: 20px;
+
+/*------------MIXIN------------*/
+@mixin gradient-animation($duration){
+    background: linear-gradient(90deg, #109bd6, #0c2933);
+    background-size: 400% 400%;
+    animation: gradient $duration ease infinite;
+}
+
+/*------------KEYFRAMES------------*/
+@keyframes gradient{
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
+
+/*------------MEDIA QUERIES------------*/
+
+@media screen and (max-width: 480px){
+    .video, .infopeli, .titulopeli{
+        width: 100%; 
+    }
+
+    .header-grid{
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 10px; 
+
+        h1{
+            justify-self: center; 
+        }
+
+        .header-logo{
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+
+        .header-profile{
+            justify-self: center;
+            margin-top: 10px;
+        }
+    }
+
+    .logopagina{
+        width: 90px;
+        height: 90px;
+    }
+
+    h1{
+        font-size: $font-xlarge;
+    }
+
+    .logoperfil{
+        width: 55px;
+        height: 55px;
+        margin-bottom: 10px;
+    }
+
+    .redes{
+        flex-direction: column;
+        align-items: center;
+
+        .nosotros, .social-icons{
+            width: 100%;
+            margin-bottom: 10px; 
+            justify-content: center;
+        }
+
+        .nosotros{
+            margin-right: 10px;
+        }
+    }
+
+    .formulariocont{
+        background-color: $background-color;
+        border-radius: 20px;
+        display: grid;
+        grid-template-columns: repeat(1, auto);
+        grid-template-rows: repeat(3, auto);
+        grid-template-areas: 
+            "form3"
+            "form1"
+            "form2";
+        gap: 10px;
+        margin-top: 10px;
+        padding-bottom: 30px;
+
+        h2{
+            font-size: $font-large;
+        }
+
+        p{
+            font-size: $font-small;
+        }
+    }
+
+    .contenedor2{
+        margin: 0 auto;
+        padding: 20px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, auto);
+        grid-template-areas: 
+            "menus"
+            "calen"
+            "infocal" 
+            "pelis";
+        gap: 10px;
+    }
+
+    .infocal{
+        font-size: $font-small;
+    }
+
+    .tamano{
+        width: 350px;
+        margin: auto;
+        padding-top: 20px;
+        padding-bottom: 40px;
+    }
+
+    .lista{
+        font-size: $font-small;
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .logopagina{
+        width: 50px;
+        height: 50px;
+    }
+
+    h1{
+        font-size: $font-medium;
+    }
+
+    .logoperfil{
+        width: 40px;
+        height: 40px;
+        margin-bottom: 10px;
+    }
+
+    .contenedor2{
+        margin: 0 auto;
+        padding: 20px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, auto);
+        grid-template-areas: 
+            "menus"
+            "calen"
+            "infocal" 
+            "pelis";
+        gap: 10px;
+    }
+
+    .infocal{
+        font-size: $font-small;
+    }
+
+    .tamano{
+        width: 500px;
+        margin: auto;
+        padding-bottom: 40px;
+    }
+
+    .lista{
+        font-size: $font-small;
+        margin-top: 20px;
+    }
+
+    .formulariocont{
+        background-color: $background-color;
+        border-radius: 20px;
+        display: grid;
+        grid-template-columns: repeat(1, auto);
+        grid-template-rows: repeat(3, auto);
+        grid-template-areas: 
+            "form3"
+            "form1"
+            "form2";
+        gap: 10px;
+        margin-top: 50px;
+        padding-bottom: 30px;
+
+        h2{
+            font-size: $font-medium;
+        }
+
+        p{
+            font-size: $font-small;
+        }
+    }
+
+    .row.col3{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .col-lg-8, .col-lg-4{
+        max-width: 100%;
+        flex: 0 0 100%;
+    }
+
+    .infopeli{
+        padding: 10px 20px;
+    }
+}
